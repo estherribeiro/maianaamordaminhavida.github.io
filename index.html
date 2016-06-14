@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>DECLARAÇÃO!!</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="CSS/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="CSS/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="CSS/signin.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="JS/jquery-1.9.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="JS/ie-emulation-modes-warning.js"></script>
+    <script src="JS/md5.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <form class="form-signin">
+        <h2 class="form-signin-heading">Please enter the password</h2>
+        <!-- <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus> -->
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <!-- <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div> -->
+        <button class="btn btn-lg btn-primary btn-block" type="button" onclick="mostraModal()">Access</button>
+      </form>
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModalVideoOne" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="gridSystemModalLabel">Video One</h4>
+            </div>
+            <div class="modal-body">
+              <!-- <video width="565" height="240" controls>
+                <source src="https://youtu.be/3VnCb6er1M8" type="video/mp4">
+              </video> -->
+              <iframe width="565" height="240" src="https://www.youtube.com/embed/jv5tCpIlBJk" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" onclick="nextModalVideoTwo();">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModalVideoTwo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Video Two</h4>
+            </div>
+            <div class="modal-body">
+              <!-- <video width="565" height="240" controls>
+                <source src="images/maiana/VID_20160613_094812.mp4" type="video/mp4">
+              </video> -->
+              <iframe width="565" height="240" src="https://www.youtube.com/embed/61kBd-kwMzw" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-success" onclick="backModalVideoOne();">Back</button>
+              <button type="button" class="btn btn-primary" onclick="nextModalVideoTree();">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModalVideoTree" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Video Tree</h4>
+            </div>
+            <div class="modal-body">
+              <!-- <video width="565" height="240" controls>
+                <source src="images/maiana/VID_20160613_124528.mp4" type="video/mp4">
+              </video> -->
+              <iframe width="565" height="240" src="https://www.youtube.com/embed/JLy6onRWDNg" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-success" onclick="backModalVideoTwo();">Back</button>
+              <button type="button" class="btn btn-primary" onclick="nextModalVideoFour();">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModalVideoFour" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Solicitation</h4>
+            </div>
+            <div class="modal-body">
+              <p>Let's enjoy this "São João" and see noque will give, I need a little joy and forget the bad things that has been happening but of course if you want.</p>
+              <p>I hope you still believe in these words ܌</p>
+              <iframe width="565" height="240" src="https://www.youtube.com/embed/fVnXy0_LsQI" frameborder="0" allowfullscreen></iframe>
+              <img src="images/maiana/04-12-2014.png">
+              <img src="images/maiana/IMG_20140611_132736.jpg" width="565">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-success" onclick="backModalVideoTree();">Back</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- /container -->
+
+    <script type="text/javascript">
+      function mostraModal() {
+        var password = $("#inputPassword").val();
+        var newPassword = md5(password);
+        if (newPassword == '824bc2095352c17e1f4eaca51095b953') {
+          $("#myModalVideoOne").modal();
+        } else {
+          alert("false");
+        };
+      };
+
+      function nextModalVideoTwo() {
+        $("#myModalVideoOne").modal('toggle');
+        $("#myModalVideoOne").modal('hide');
+        $("#myModalVideoTwo").modal('show');
+      };
+
+      function nextModalVideoTree() {
+        $("#myModalVideoTwo").modal('toggle');
+        $("#myModalVideoTwo").modal('hide');
+        $("#myModalVideoTree").modal('show');
+      };
+
+      function nextModalVideoFour() {
+        $("#myModalVideoTree").modal('toggle');
+        $("#myModalVideoTree").modal('hide');
+        $("#myModalVideoFour").modal('show');
+      };
+
+      function backModalVideoOne() {
+        $("#myModalVideoOne").modal('show');
+        $("#myModalVideoTwo").modal('toggle');
+        $("#myModalVideoTwo").modal('hide');
+      };
+
+      function backModalVideoTwo() {
+        $("#myModalVideoTwo").modal('show');
+        $("#myModalVideoTree").modal('toggle');
+        $("#myModalVideoTree").modal('hide');
+      };
+
+      function backModalVideoTree() {
+        $("#myModalVideoTree").modal('show');
+        $("#myModalVideoFour").modal('toggle');
+        $("#myModalVideoFour").modal('hide');
+      };
+    </script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="JS/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
